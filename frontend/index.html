@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f4f1ea">
+  <meta name="description" content="Acompanhe os jogos, resultados e equipes do Intercurso no EtecScore.">
+  <title>EtecScore — Dashboard</title>
+  <link rel="icon" type="image/svg+xml" href="./src/assets/favicon.svg">
+  <link rel="stylesheet" href="./src/styles/output.css">
+</head>
+<body data-page="dashboard">
+  <div id="header-mount"></div>
+  <main class="page-shell dashboard-layout">
+    <aside class="dashboard-sidebar">
+      <div class="section-heading">
+        <span class="eyebrow">Dashboard</span>
+        <h1>Modalidades</h1>
+      </div>
+      <nav id="modality-list" class="modality-list" aria-label="Filtrar por modalidade"></nav>
+      <div class="sidebar-note">
+        <span class="note-mark"></span>
+        <p>Uma visão geral das competições do Intercurso.</p>
+      </div>
+    </aside>
+
+    <section class="dashboard-content" aria-label="Resumo dos jogos">
+      <section class="match-section" aria-labelledby="live-title">
+        <div class="section-heading section-heading-row">
+          <div><span class="eyebrow">Jogos</span><h2 id="live-title">Em andamento</h2></div>
+          <span class="section-count" id="live-count">—</span>
+        </div>
+        <div class="match-list" id="live-matches" aria-live="polite"></div>
+      </section>
+      <section class="match-section" aria-labelledby="results-title">
+        <div class="section-heading section-heading-row">
+          <div><span class="eyebrow">Jogos</span><h2 id="results-title">Resultados de hoje</h2></div>
+          <a class="text-link" href="mata-mata.html">Ver mata-mata <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="match-list" id="today-matches" aria-live="polite"></div>
+      </section>
+      <section class="match-section" aria-labelledby="upcoming-title">
+        <div class="section-heading section-heading-row">
+          <div><span class="eyebrow">Jogos</span><h2 id="upcoming-title">Próximos</h2></div>
+          <span class="section-count" id="upcoming-count">—</span>
+        </div>
+        <div class="match-list" id="upcoming-matches" aria-live="polite"></div>
+      </section>
+    </section>
+  </main>
+  <footer class="site-footer"><span>EtecScore</span><span>2º Desenvolvimento de Sistemas · Intercurso</span></footer>
+  <script type="module" src="./src/scripts/main.js"></script>
+</body>
+</html>
