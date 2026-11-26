@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f4f1ea">
+  <meta name="description" content="Consulte e organize as equipes participantes do Intercurso.">
+  <title>EtecScore — Equipes</title>
+  <link rel="icon" type="image/svg+xml" href="./src/assets/favicon.svg">
+  <link rel="stylesheet" href="./src/styles/output.css">
+</head>
+<body data-page="teams">
+  <div id="header-mount"></div>
+  <main class="page-shell content-page">
+    <div class="page-intro page-intro-row">
+      <div>
+        <span class="eyebrow">Intercurso · Participantes</span>
+        <h1>Equipes</h1>
+        <p class="page-description">Consulte os times cadastrados e organize os participantes da competição.</p>
+      </div>
+      <button class="button button-dark" id="new-team-button" type="button">Nova equipe <span aria-hidden="true">↗</span></button>
+    </div>
+
+    <section class="teams-toolbar" aria-label="Filtros de equipes">
+      <label class="field-search">
+        <span class="sr-only">Pesquisar equipes</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+        <input id="team-filter" type="search" placeholder="Pesquisar equipe..." autocomplete="off">
+      </label>
+      <div class="toolbar-meta"><span id="team-total">0 equipes</span><span class="demo-indicator" id="data-mode-indicator">Modo demonstração</span></div>
+    </section>
+
+    <section class="teams-grid" id="teams-grid" aria-live="polite"></section>
+  </main>
+  <footer class="site-footer"><span>EtecScore</span><span>Gestão de equipes</span></footer>
+  <script type="module" src="./src/scripts/main.js"></script>
+</body>
+</html>
